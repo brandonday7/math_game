@@ -1,13 +1,22 @@
 class Round
-  @@turn = 0
+  attr_accessor :turn
+
+  def initialize
+  @turn = 0
+  end
 
   def whos_turn
+    if @turn % 2 != 0
+      return 1
+    end
+    2
   end
 
   def game_over?(lives)
-  end
-
-  def display_final
+    if lives > 0
+      return nil
+    end
+    true
   end
 
 end
