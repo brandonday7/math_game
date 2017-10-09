@@ -9,7 +9,7 @@ class Round
     if @turn % 2 != 0
       return 1
     end
-    2
+    0
   end
 
   def game_over?(lives)
